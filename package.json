@@ -1,0 +1,23 @@
+{
+  "name": "default_redirects",
+  "version": "1.0.0",
+  "description": "To redirect empty domains to something useful.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiekub/default_redirects.git"
+  },
+  "author": "Thomas Rosen",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/qiekub/default_redirects/issues"
+  },
+  "homepage": "https://github.com/qiekub/default_redirects#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
