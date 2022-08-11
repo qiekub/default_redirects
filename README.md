@@ -1,1 +1,1 @@
-# map_redirect
+# default_redirects
