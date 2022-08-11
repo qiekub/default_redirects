@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
     res.redirect(307, 'https://map.qiekub.org')
     return
   }
-  
+
   res.status(200).send('Contact <a href="thomas.rosen@qiekub.org">Thomas Rosen</a> for more information.')
 })
 
