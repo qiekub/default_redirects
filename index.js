@@ -10,7 +10,8 @@ app.use(function (req, res, next) {
     host === 'queer.events' || host.endsWith('.queer.events') ||
     host === 'queer.domains' || host.endsWith('.queer.domains') ||
     host === 'queer.tips' || host.endsWith('.queer.tips') ||
-    host === 'queer.how' || host.endsWith('.queer.how')
+    host === 'queer.how' || host.endsWith('.queer.how') ||
+    host === 'queermap.lgbt' || host.endsWith('.queermap.lgbt')
   ) {
     res.redirect(307, 'https://map.qiekub.org')
     return
