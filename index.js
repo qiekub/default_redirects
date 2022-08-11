@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const port = 11692
+const port = 18418 // redirect > rdrct > rdr < 18418
 const host = '0.0.0.0'
 
 app.use(function (req, res, next) {
