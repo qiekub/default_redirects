@@ -5,18 +5,13 @@ const port = 18418 // redirect > rdrct > rdr < 18418
 const host = '0.0.0.0'
 
 app.use(function (req, res, next) {
-  const host = req.get('host')
-  const origin = req.get('origin')
-  console.log('host:', host)
-  console.log('origin:', origin)
-
-  const domain = req.get('origin') || req.get('host') || ''
-  if (domain === '' || domain === 'localhost' || domain.startsWith('localhost:')) {
-    res.status(404).send('<h1>localhost<h1>')
+  const host = req.get('host') || ''
+  if (host === 'queer.events') {
+    res.redirect(307, 'https://map.qiekub.org')
     return
   }
-
-  res.status(404).send('<h1>redirect<h1>')
+  
+  res.status(200).send('Contact <a href="thomas.rosen@qiekub.org">Thomas Rosen</a> for more information.')
 })
 
 // app.get('/', (req, res) => {
