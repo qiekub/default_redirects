@@ -6,7 +6,12 @@ const host = '0.0.0.0'
 
 app.use(function (req, res, next) {
   const host = req.get('host') || ''
-  if (host === 'queer.events') {
+  if (
+    host === 'queer.events' ||
+    host === 'queer.domains' ||
+    host === 'queer.tips' ||
+    host === 'queer.how'
+  ) {
     res.redirect(307, 'https://map.qiekub.org')
     return
   }
