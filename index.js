@@ -7,10 +7,10 @@ const host = '0.0.0.0'
 app.use(function (req, res, next) {
   const host = req.get('host') || ''
   if (
-    host === 'queer.events' ||
-    host === 'queer.domains' ||
-    host === 'queer.tips' ||
-    host === 'queer.how'
+    host === 'queer.events' || host.endsWith('.queer.events') ||
+    host === 'queer.domains' || host.endsWith('.queer.domains') ||
+    host === 'queer.tips' || host.endsWith('.queer.tips') ||
+    host === 'queer.how' || host.endsWith('.queer.how')
   ) {
     res.redirect(307, 'https://map.qiekub.org')
     return
