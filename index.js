@@ -15,6 +15,13 @@ app.use(function (req, res, next) {
   ) {
     res.redirect(307, 'https://map.qiekub.org')
     return
+  } else if (
+    host.endsWith('.thomasrosen.me') ||
+    host === 'thomasrosen.xyz' || host.endsWith('.thomasrosen.xyz') ||
+    host === 'thomasrosen.qiekub.org' || host.endsWith('.thomasrosen.qiekub.org')
+  ) {
+    res.redirect(307, 'https://thomasrosen.me')
+    return
   }
 
   res.status(200).send('Contact <a href="thomas.rosen@qiekub.org">Thomas Rosen</a> for more information.')
