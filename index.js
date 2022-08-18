@@ -18,7 +18,8 @@ app.use(function (req, res, next) {
   } else if (
     host.endsWith('.thomasrosen.me') ||
     host === 'thomasrosen.xyz' || host.endsWith('.thomasrosen.xyz') ||
-    host === 'thomasrosen.qiekub.org' || host.endsWith('.thomasrosen.qiekub.org')
+    host === 'thomasrosen.qiekub.org' || host.endsWith('.thomasrosen.qiekub.org') ||
+    host === 'thomasrosen.qiekub.com' || host.endsWith('.thomasrosen.qiekub.com')
   ) {
     res.redirect(307, 'https://thomasrosen.me')
     return
