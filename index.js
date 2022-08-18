@@ -4,6 +4,8 @@ const app = express()
 const port = 18418 // redirect > rdrct > rdr < 18418
 const host = '0.0.0.0'
 
+// uberspace web domain add news-bonn.de; uberspace web domain add www.news-bonn.de; uberspace web backend set news-bonn.de --http --port 18418; uberspace web backend set www.news-bonn.de --http --port 18418;
+
 app.use(function (req, res, next) {
   const host = req.get('host') || ''
   if (
@@ -11,7 +13,9 @@ app.use(function (req, res, next) {
     host === 'queer.domains' || host.endsWith('.queer.domains') ||
     host === 'queer.tips' || host.endsWith('.queer.tips') ||
     host === 'queer.how' || host.endsWith('.queer.how') ||
-    host === 'queermap.lgbt' || host.endsWith('.queermap.lgbt')
+    host === 'queermap.lgbt' || host.endsWith('.queermap.lgbt') ||
+    host === 'news-bonn.de' || host.endsWith('.news-bonn.de') ||
+    host === 'news.qiekub.org' || host.endsWith('.news.qiekub.org')
   ) {
     res.redirect(307, 'https://map.qiekub.org')
     return
