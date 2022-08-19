@@ -4,8 +4,6 @@ const app = express()
 const port = 18418 // redirect > rdrct > rdr < 18418
 const host = '0.0.0.0'
 
-// uberspace web domain add news-bonn.de; uberspace web domain add www.news-bonn.de; uberspace web backend set news-bonn.de --http --port 18418; uberspace web backend set www.news-bonn.de --http --port 18418;
-
 app.use(function (req, res, next) {
   const host = req.get('host') || ''
   if (
